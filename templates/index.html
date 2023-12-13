@@ -15,22 +15,16 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
         <!-- Favicon -->
-        <link rel="icon" href="images/clover green.png" type="image/png">
+        <link rel="icon" href="../static/assests/clover green.png" type="image/png">
 
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans&display=swap" rel="stylesheet">
                         
-        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="../static/css/bootstrap.min.css" rel="stylesheet">
 
-        <link href="css/bootstrap-icons.css" rel="stylesheet">
+        <link href="../static/css/bootstrap-icons.css" rel="stylesheet">
 
-        <link href="css/templatemo-topic-listing.css" rel="stylesheet">      
-<!--
+        <link href="../static/css/index.css" rel="stylesheet">      
 
-TemplateMo 590 topic listing
-
-https://templatemo.com/tm-590-topic-listing
-
--->
     </head>
     
     <body id="top">
@@ -39,8 +33,8 @@ https://templatemo.com/tm-590-topic-listing
 
             <nav class="navbar navbar-expand-lg">
                 <div class="container">
-                    <a class="navbar-brand" href="index.html">
-                        <img src="./images/clover.svg" class="bi-back" width="40px"></img>
+                    <a class="navbar-brand" href="{{ url_for('home_page') }}">
+                        <img src="../static/assests/clover.svg" class="bi-back" width="40px"></img>
                         <span>Luccr</span>
                     </a>
 
@@ -98,7 +92,7 @@ https://templatemo.com/tm-590-topic-listing
                         <div class="col-lg-6 col-12">
                             <div class="custom-block custom-block-overlay">
                                 <div class="d-flex flex-column h-100">
-                                    <img src="images/businesswoman-using-tablet-analysis.jpg" class="custom-block-image img-fluid" alt="">
+                                    <img src="../static/assests/businesswoman-using-tablet-analysis.jpg" class="custom-block-image img-fluid" alt="">
 
                                     <div class="custom-block-overlay-text d-flex">
                                         <div>
@@ -109,7 +103,7 @@ https://templatemo.com/tm-590-topic-listing
 
                                             <a href="#" class="btn custom-btn mt-lg-5">Learn More</a>
 
-                                            <a href="forms.html" class="btn custom-btn mt-lg-5 ms-lg-4 ">Questionnaire</a>
+                                            <a href="{{ url_for('form_page') }}" class="btn custom-btn mt-lg-5 ms-lg-4 ">Questionnaire</a>
                                         </div>
                                     </div>
 
@@ -137,7 +131,7 @@ https://templatemo.com/tm-590-topic-listing
 
                 <div class="container">
                     <div class="row">
-                            <img src="./images/sunscreen.jpg" alt="The Risk of Sun Exposure" class="col-lg-6 img-fluid  rounded-5 col-sm" />
+                            <img src="../static/assests/sunscreen.jpg" alt="The Risk of Sun Exposure" class="col-lg-6 img-fluid  rounded-5 col-sm" />
                             <div class="col-lg-6 my-2 col-sm">
                                 <p>Imagine that an organization like MD Anderson Cancer Center wants to tell people about <a class="d-inline text-decoration-underline" href="https://www.mdanderson.org/publications/focused-on-health/do-i-need-to-wear-sunscreen-indoors-.h15-1593780.html" target="_blank">the risk of sun exposure even when indoors</a> and encourage them to wear sunscreen even when they aren’t going to be outside. 
                                 </p>
@@ -203,7 +197,7 @@ https://templatemo.com/tm-590-topic-listing
     
                             <div class="col-12 text-center mt-3">
                                 <p class="text-white">
-                                    <a href="forms.html" class="text-white btn custom-btn mt-lg-5 ms-lg-4">Questionnaire</a>
+                                    <a href="{{ url_for('form_page') }}" class="text-white btn custom-btn mt-lg-5 ms-lg-4">Questionnaire</a>
                                 </p>
                             </div>
                         </div>
@@ -228,7 +222,7 @@ https://templatemo.com/tm-590-topic-listing
                         <div class="clearfix"></div>
 
                         <div class="col-lg-5 col-12">
-                            <img src="images/faq_graphic.jpg" class="img-fluid" alt="FAQs">
+                            <img src="../static/assests/faq_graphic.jpg" class="img-fluid" alt="FAQs">
                         </div>
 
                         <div class="col-lg-6 col-12 m-auto">
@@ -288,9 +282,9 @@ https://templatemo.com/tm-590-topic-listing
                 <div class="row">
 
                     <div class="col-lg-3 col-12 mb-4 pb-2">
-                        <a class="navbar-brand mb-2" href="index.html">
+                        <a class="navbar-brand mb-2" href="{{ url_for('home_page') }}">
                             <!-- <i class="bi-back"></i> -->
-                            <img src="./images/clover.svg" class="bi-back" width="40px"></img>
+                            <img src="../static/assests/clover.svg" class="bi-back" width="40px"></img>
                             <span>Luccr</span>
                         </a>
                     </div>
@@ -359,11 +353,11 @@ https://templatemo.com/tm-590-topic-listing
 
 
         <!-- JAVASCRIPT FILES -->
-        <script src="js/jquery.min.js"></script>
-        <script src="js/bootstrap.bundle.min.js"></script>
-        <script src="js/jquery.sticky.js"></script>
-        <script src="js/click-scroll.js"></script>
-        <script src="js/custom.js"></script>
+        <script src="../static/js/jquery.min.js"></script>
+        <script src="../static/js/bootstrap.bundle.min.js"></script>
+        <script src="../static/js/jquery.sticky.js"></script>
+        <script src="../static/js/click-scroll.js"></script>
+        <script src="../static/js/custom.js"></script>
 
     </body>
 </html>
