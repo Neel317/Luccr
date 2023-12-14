@@ -221,11 +221,11 @@ strong {
 }
 .multi_step_form #msform fieldset h3 {
   font: 500 18px/35px "Roboto", sans-serif;
-  color: #3f4553;
+  color: var(--dark-color);
 }
 .multi_step_form #msform fieldset h6 {
   font: 400 15px/28px "Roboto", sans-serif;
-  color: #5f6771;
+  color: var(--dark-color);
   padding-bottom: 30px;
 }
 .multi_step_form #msform fieldset .intl-tel-input {
@@ -444,13 +444,19 @@ strong {
   font: 500 13px/1 "Roboto", sans-serif;
 }
 .multi_step_form #msform #progressbar li:nth-child(2):before {
-  content: "";
+  content: "2";
 }
 .multi_step_form #msform #progressbar li:nth-child(3):before {
-  content: "";
+  content: "3";
+}
+.multi_step_form #msform #progressbar li:nth-child(4):before {
+  content: "4";
+}
+.multi_step_form #msform #progressbar li:nth-child(5):before {
+  content: "5";
 }
 .multi_step_form #msform #progressbar li:before {
-  content: "";
+  content: "1";
   font: normal normal normal 30px/50px Ionicons;
   width: 50px;
   height: 50px;
@@ -474,14 +480,14 @@ strong {
   width: 150%;
 }
 .multi_step_form #msform #progressbar li.active {
-  color: #5cb85c;
+  color: var(--secondary-color);
 }
 .multi_step_form #msform #progressbar li.active:before, .multi_step_form #msform #progressbar li.active:after {
-  background: #5cb85c;
+  background: var(--secondary-color);
   color: white;
 }
 .multi_step_form #msform .action-button {
-  background: #5cb85c;
+  background: var(--custom-btn-bg-color);
   color: white;
   border: 0 none;
   border-radius: 5px;
@@ -489,21 +495,79 @@ strong {
   min-width: 130px;
   font: 700 14px/40px "Roboto", sans-serif;
   border: 1px solid #5cb85c;
-  margin: 0 5px;
+  margin: 10px 5px;
   text-transform: uppercase;
   display: inline-block;
 }
 .multi_step_form #msform .action-button:hover, .multi_step_form #msform .action-button:focus {
-  background: #405867;
-  border-color: #405867;
+  background: var(--custom-btn-bg-hover-color);
+  border-color: var(--custom-btn-bg-hover-color);
 }
 .multi_step_form #msform .previous_button {
   background: transparent;
-  color: #99a2a8;
-  border-color: #99a2a8;
+  color: var(--fourth-color);
+  border-color: var(--fourth-color);
 }
 .multi_step_form #msform .previous_button:hover, .multi_step_form #msform .previous_button:focus {
-  background: #405867;
-  border-color: #405867;
+  background: var(--custom-btn-bg-hover-color);
+  border-color: var(--custom-btn-bg-hover-color);
   color: #fff;
+}
+
+/* CUSTOM FORM ELEMENTS */
+input[type="text"], textarea{
+  border-radius: 5px;
+  transition: border-color 0.3s ease
+}
+
+.fill-the-blanks {
+  width: 45%;
+  margin-left: 0.8rem;
+  margin-top: 8px;
+  border-top: 0px;
+  border-right: 0px;
+  border-left: 0px;
+}
+
+.fill-the-blanks:focus {
+  border-color: var(--secondary-color);
+  border-width: 4px;
+  outline: none;
+}
+textarea {
+  width: 100%;
+  font: 1rem;
+}
+
+textarea:focus{
+  border-color: var(--secondary-color);
+  border-width: 2px;
+  outline: none;
+}
+
+.rounded-circle {
+  background-color: var(--secondary-color);
+}
+
+.risk-icons {
+  color: var(--secondary-color);
+}
+
+#square {
+  list-style-type: square;
+}
+
+#issues, #issues1, #issues2, #issues3{
+  width: 55%;
+  font-size: 1rem;
+}
+
+
+.char-limit {
+  font-size: 12px;
+  color: #868e96;
+}
+
+#inline {
+  margin: 0px;
 }

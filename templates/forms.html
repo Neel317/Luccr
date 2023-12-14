@@ -43,58 +43,79 @@
   <form id="msform"> 
     <!-- progressbar -->
     <ul id="progressbar">
-      <li class="active">Verify Phone</li>  
-      <li>Upload Documents</li> 
+      <li class="active">Choices and issues</li>  
+      <li>Risks</li> 
       <li>Security Questions</li>
       <li>Upload Documents</li> 
       <li>Security Questions</li>
     </ul>
+
+
     <!-- fieldsets -->
     <fieldset>
-      <h3>Setup your phone</h3>
-      <h6>We will send you a SMS. Input the code to verify.</h6> 
-      <div class="form-row"> 
-        <div class="form-group col-md-6">  
-          <input type="tel" id="phone" class="form-control" placeholder="+880"> 
-        </div>  
-        <div class="form-group col-md-6"> 
-          <input type="text" class="form-control" placeholder="1123456789">
-        </div> 
-      </div> 
-      <div class="done_text"> 
-        <a href="#" class="don_icon"><i class="ion-android-done"></i></a> 
-        <h6>A secret code is sent to your phone. <br>Please enter it here.</h6> 
-      </div>  
-      <div class="code_group"> 
-        <input type="text" class="form-control" placeholder="0">
-        <input type="text" class="form-control" placeholder="0">
-        <input type="text" class="form-control" placeholder="0">
-        <input type="text" class="form-control" placeholder="0">
-      </div>  
+      <h3>Define the choice and identify issues</h3>
+      <h6>Some related text explaining stuff...</h6> 
+      <div class="form-group mb-2 text-left"> 
+        <label for="topic" id="inline">I want to help people make a choice about </label>
+        <input type="text" class="fill-the-blanks" id="topic" name="__topic__" placeholder="Maximun 50 characters" maxlength="50" autocomplete="off" required>
+      </div>
+      <div class="form-group mb-4 text-left">
+        <label for="topic1" id="inline"> Specifically, I want them to choose to </label>
+        <input type="text" class="fill-the-blanks" id="topic1" name="__topic1__" placeholder="Maximun 50 characters" maxlength="50" autocomplete="off" required>
+      </div>
+      <div class="form-group text-left">
+          <label for="issues">What do you think are most important issues? <i>(Keep it short less than 40 characters)</i> </label>
+          <ul id="square">
+            <li><input type="text" class="fill-the-blanks" id="issues" name="__issues__" autocomplete="off" maxlength="40"/></li>
+            <li><input type="text" class="fill-the-blanks" id="issues1" name="__issues1__" autocomplete="off" maxlength="40"/></li>
+            <li><input type="text" class="fill-the-blanks" id="issues2" name="__issues2__" autocomplete="off" maxlength="40"/></li>
+            <li><input type="text" class="fill-the-blanks" id="issues3" name="__issues3__" autocomplete="off" maxlength="40"/></li>
+          </ul>
+      </div>
       <button type="button" class="action-button previous_button">Back</button>
       <button type="button" class="next action-button">Continue</button>  
     </fieldset>
+
+
     <fieldset>
-      <h3>Verify Your Identity</h3>
-      <h6>Please upload any of these documents to verify your Identity.</h6>
-      <div class="passport">
-        <h4>Govt. ID card <br>PassPort <br>Driving License.</h4> 
-        <a href="#" class="don_icon"><i class="ion-android-done"></i></a> 
+      <h3>What is risk? Three elements</h3>
+      <h6>Some related text explaining stuff...</h6>
+      <div class="form-group text-center">
+        <label for="risk">What is the risk information that you want to communicate? In our example it was the danger of sun exposure while indoors.</label>
+        <textarea id="risk"  maxlength="300" placeholder="Type here..."></textarea>
       </div>
-      <div class="input-group"> 
-        <div class="custom-file">
-          <input type="file" class="custom-file-input" id="upload">
-          <label class="custom-file-label" for="upload"><i class="ion-android-cloud-outline"></i>Choose file</label>
+      <div class="row">
+        <div class="row">
+          <div class="col-4 text-center">
+            <svg xmlns="http://www.w3.org/2000/svg" height="32" width="48" viewBox="0 0 640 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path fill="#81b622" d="M48 0C21.5 0 0 21.5 0 48V368c0 26.5 21.5 48 48 48H64c0 53 43 96 96 96s96-43 96-96H384c0 53 43 96 96 96s96-43 96-96h32c17.7 0 32-14.3 32-32s-14.3-32-32-32V288 256 237.3c0-17-6.7-33.3-18.7-45.3L512 114.7c-12-12-28.3-18.7-45.3-18.7H416V48c0-26.5-21.5-48-48-48H48zM416 160h50.7L544 237.3V256H416V160zM112 416a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm368-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"/></svg>
+            <h6>Exposure</h6>
+          </div>
+          <div class="col-4 text-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="risk-icons" width="32" height="32" fill="currentColor" class="bi bi-heartbreak-fill" viewBox="0 0 16 16">
+                <path d="M8.931.586 7 3l1.5 4-2 3L8 15C22.534 5.396 13.757-2.21 8.931.586ZM7.358.77 5.5 3 7 7l-1.5 3 1.815 4.537C-6.533 4.96 2.685-2.467 7.358.77Z"/>
+              </svg>
+            <h6>Severity</h6>
+          </div>
+          <div class="col-4 text-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-question-circle-fill risk-icons" viewBox="0 0 16 16">
+              <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.496 6.033h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286a.237.237 0 0 0 .241.247zm2.325 6.443c.61 0 1.029-.394 1.029-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94 0 .533.425.927 1.01.927z"/>
+            </svg>
+            <h6>Susceptibility</h6>
+          </div>
+        </div>
+        <div class="row">
+          <p>
+            <iframe width="70%"height="225" src="https://www.youtube.com/embed/_inKs4eeHiI?si=_RlHt4ocRLxSA5mj" frameborder="0" allowfullscreen></iframe>
+          </p>
+          <p style="color: black;">Watch to learn the 3 elements of Risk</p>
         </div>
       </div>
-      <ul class="file_added">
-        <li>File Added:</li>
-        <li><a href="#"><i class="ion-paperclip"></i>national_id_card.png</a></li>
-        <li><a href="#"><i class="ion-paperclip"></i>national_id_card_back.png</a></li>
-      </ul>
+
       <button type="button" class="action-button previous previous_button">Back</button>
       <button type="button" class="next action-button">Continue</button>  
     </fieldset>  
+
+
     <fieldset>
       <h3>Create Security Questions</h3>
       <h6>Please update your account with security questions</h6> 
