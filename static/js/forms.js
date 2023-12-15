@@ -5,26 +5,46 @@ const issues = document.querySelector('#issues');
 const issues1 = document.querySelector('#issues1');
 const issues2 = document.querySelector('#issues2');
 const issues3 = document.querySelector('#issues3');
+// const exposure = document.querySelector('#exposure');
+// const severity = document.querySelector('#severity');
+// const susceptibility = document.querySelector('#susceptibility');
+// const check21 = document.querySelector('#check2.1');
+// const check22 = document.querySelector('#check2.2');
+// const check23 = document.querySelector('#check2.3');
+// const check24 = document.querySelector('#check2.4');
+// const check25 = document.querySelector('#check2.5');
 
 function validateInputs(){
     if(!topic.value.length){
         return {element: topic, complete: false};
     } 
-    else if(!topic1.value.length){
-        return {element: topic1, complete: false};
-    } 
-    else if(!issues.value.length){
-        return {element: issues, complete: false};
-    }
-    else if(!issues1.value.length){
-        return {element: issues1, complete: false};
-    }
-    else if(!issues2.value.length){
-        return {element: issues2, complete: false};
-    }
-    else if(!issues3.value.length){
-        return {element: issues3, complete: false};
-    }
+    // else if(!topic1.value.length){
+    //     return {element: topic1, complete: false};
+    // } 
+    // else if(!issues.value.length){
+    //     return {element: issues, complete: false};
+    // }
+    // else if(!issues1.value.length){
+    //     return {element: issues1, complete: false};
+    // }
+    // else if(!issues2.value.length){
+    //     return {element: issues2, complete: false};
+    // }
+    // else if(!issues3.value.length){
+    //     return {element: issues3, complete: false};
+    // }
+    // else if(!exposure.value.length){
+    //     return {element: exposure, complete: false};
+    // }
+    // else if(!severity.value.length){
+    //     return {element: severity, complete: false};
+    // }
+    // else if(!susceptibility.value.length){
+    //     return {element: susceptibility, complete: false};
+    // }
+    // else if(!check21.checked || !check22.checked || !check23.checked || !check24.checked || !check25.checked){
+    //     return {element: null, complete: false};
+    // }
     else {
         return {element: null, complete: true};
     }
@@ -45,7 +65,7 @@ function validateInputs(){
           
 
           const inputChecks = validateInputs()
-          if(inputChecks.complete || true){
+          if(inputChecks.complete){
             if (animating) return false;
             animating = true;
 
@@ -70,14 +90,14 @@ function validateInputs(){
                     opacity = 1 - now;
                     current_fs.css({
                         'transform': 'scale(' + scale + ')',
-                        'position': 'absolute'
                     });
                     next_fs.css({
                         'left': left,
+                        'height': 'auto',
                         'opacity': opacity
                     });
                 },
-                duration: 800,
+                duration: 600,
                 complete: function () {
                     current_fs.hide();
                     animating = false;
@@ -85,6 +105,7 @@ function validateInputs(){
                 //this comes from the custom easing plugin
                 easing: 'easeInOutBack'
             });
+            window.scrollTo({ top: 0, behavior: 'smooth' });
           } else {
             if(inputChecks.element){
                 inputChecks.element.focus();
@@ -117,21 +138,22 @@ function validateInputs(){
                   //3. increase opacity of previous_fs to 1 as it moves in
                   opacity = 1 - now;
                   current_fs.css({
-                      'left': left
+                      'left': left,
                   });
                   previous_fs.css({
                       'transform': 'scale(' + scale + ')',
                       'opacity': opacity
                   });
               },
-              duration: 800,
+              duration: 600,
               complete: function () {
                   current_fs.hide();
                   animating = false;
               },
               //this comes from the custom easing plugin
               easing: 'easeInOutBack'
-          });
+            });
+            window.scrollTo({ top: 0, behavior: 'smooth' });
       });
 
       $(".submit").click(function () {

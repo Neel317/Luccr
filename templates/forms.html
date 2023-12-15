@@ -40,33 +40,33 @@
 <!-- partial:index.partial.html -->
 <!-- Multi step form --> 
 <section class="multi_step_form">  
-  <form id="msform"> 
+  <form id="msform" action="{{ url_for('form_submit')}}" method="post"> 
     <!-- progressbar -->
     <ul id="progressbar">
       <li class="active">Choices and issues</li>  
       <li>Risks</li> 
-      <li>Security Questions</li>
-      <li>Upload Documents</li> 
-      <li>Security Questions</li>
+      <li>Elements of Risk</li>
+      <li>Additional questions</li> 
+      <li>Call to Action</li>
     </ul>
 
 
     <!-- fieldsets -->
     <fieldset>
       <h3>Define the choice and identify issues</h3>
-      <h6>Some related text explaining stuff...</h6> 
+      <h6>Need to fill all the input fields</h6> 
       <div class="form-group mb-2 text-left"> 
         <label for="topic" id="inline">I want to help people make a choice about </label>
         <input type="text" class="fill-the-blanks" id="topic" name="__topic__" placeholder="Maximun 50 characters" maxlength="50" autocomplete="off" required>
       </div>
       <div class="form-group mb-4 text-left">
         <label for="topic1" id="inline"> Specifically, I want them to choose to </label>
-        <input type="text" class="fill-the-blanks" id="topic1" name="__topic1__" placeholder="Maximun 50 characters" maxlength="50" autocomplete="off" required>
+        <input type="text" class="fill-the-blanks" id="topic1" name="__topic1__" placeholder="Maximun 50 characters" maxlength="50" autocomplete="off">
       </div>
       <div class="form-group text-left">
           <label for="issues">What do you think are most important issues? <i>(Keep it short less than 40 characters)</i> </label>
           <ul id="square">
-            <li><input type="text" class="fill-the-blanks" id="issues" name="__issues__" autocomplete="off" maxlength="40"/></li>
+            <li><input type="text" class="fill-the-blanks" id="issues" name="__issues0__" autocomplete="off" maxlength="40"/></li>
             <li><input type="text" class="fill-the-blanks" id="issues1" name="__issues1__" autocomplete="off" maxlength="40"/></li>
             <li><input type="text" class="fill-the-blanks" id="issues2" name="__issues2__" autocomplete="off" maxlength="40"/></li>
             <li><input type="text" class="fill-the-blanks" id="issues3" name="__issues3__" autocomplete="off" maxlength="40"/></li>
@@ -79,10 +79,10 @@
 
     <fieldset>
       <h3>What is risk? Three elements</h3>
-      <h6>Some related text explaining stuff...</h6>
+      <h6>Need to fill all the input fields</h6>
       <div class="form-group text-center">
         <label for="risk">What is the risk information that you want to communicate? In our example it was the danger of sun exposure while indoors.</label>
-        <textarea id="risk"  maxlength="300" placeholder="Type here..."></textarea>
+        <textarea id="risk" name="__risk__" maxlength="300" placeholder="Type here..."></textarea>
       </div>
       <div class="row">
         <div class="row">
@@ -111,36 +111,347 @@
         </div>
       </div>
 
-      <button type="button" class="action-button previous previous_button">Back</button>
-      <button type="button" class="next action-button">Continue</button>  
+      <button type="button" class="action-button previous previous_button mb-5">Back</button>
+      <button type="button" class="next action-button mb-5">Continue</button>  
     </fieldset>  
 
 
     <fieldset>
-      <h3>Create Security Questions</h3>
-      <h6>Please update your account with security questions</h6> 
-      <div class="form-group"> 
-        <select class="product_select">
-          <option data-display="1. Choose A Question">1. Choose A Question</option> 
-          <option>2. Choose A Question</option>
-          <option>3. Choose A Question</option> 
-        </select>
-      </div> 
-      <div class="form-group fg_2"> 
-        <input type="text" class="form-control" placeholder="Anwser here:">
-      </div> 
-      <div class="form-group"> 
-        <select class="product_select">
-          <option data-display="1. Choose A Question">1. Choose A Question</option> 
-          <option>2. Choose A Question</option>
-          <option>3. Choose A Question</option> 
-        </select>
-      </div> 
-      <div class="form-group fg_3"> 
-        <input type="text" class="form-control" placeholder="Anwser here:">
-      </div> 
+      <h3>Describe elements of risks</h3>
+      <h6>Need to fill all the input fields</h6>
+      <div class="form-group text-left">
+        <div class="mb-4">
+          <div class="row">
+            <div class="col-8">
+              <p class="paraQues">Is the Exposure of the consequences high, moderate, or low?</p>
+              <input type="radio" id="exposure" name="__exposure__" value="High">
+              <label>  High</label><br>
+              <input type="radio" id="exposure" name="__exposure__" value="Moderate">
+              <label>  Moderate</label><br>
+              <input type="radio" id="exposure" name="__exposure__" value="Low">
+              <label>  Low</label><br>
+            </div>
+            <div class="col-4 text-center">
+              <svg xmlns="http://www.w3.org/2000/svg" height="32" width="48" viewBox="0 0 640 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path fill="#81b622" d="M48 0C21.5 0 0 21.5 0 48V368c0 26.5 21.5 48 48 48H64c0 53 43 96 96 96s96-43 96-96H384c0 53 43 96 96 96s96-43 96-96h32c17.7 0 32-14.3 32-32s-14.3-32-32-32V288 256 237.3c0-17-6.7-33.3-18.7-45.3L512 114.7c-12-12-28.3-18.7-45.3-18.7H416V48c0-26.5-21.5-48-48-48H48zM416 160h50.7L544 237.3V256H416V160zM112 416a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm368-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"/></svg>
+              <h6>Exposure</h6>
+            </div>
+          </div>
+          <div class="text-center">
+            <textarea id="exposure" name="__exposureNotes__" maxlength="120" placeholder="Enter in your notes about the severity of your consequence here.."></textarea>
+          </div><span><i>Maximum character limit is 120</i></span>
+        </div>
+
+
+        <div class="mb-4">
+          <div class="row">
+            <div class="col-8">
+              <p class="paraQues">Is the Severity of the consequences high, moderate, or low?</p>
+              <input type="radio" id="severity" name="__severity__" value="High">
+              <label>  High</label><br>
+              <input type="radio" id="severity" name="__severity__" value="Moderate">
+              <label>  Moderate</label><br>
+              <input type="radio" id="severity" name="__severity__" value="Low">
+              <label>  Low</label><br>
+            </div>
+            <div class="col-4 text-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="risk-icons" width="32" height="32" fill="currentColor" class="bi bi-heartbreak-fill" viewBox="0 0 16 16">
+                <path d="M8.931.586 7 3l1.5 4-2 3L8 15C22.534 5.396 13.757-2.21 8.931.586ZM7.358.77 5.5 3 7 7l-1.5 3 1.815 4.537C-6.533 4.96 2.685-2.467 7.358.77Z"/>
+              </svg>
+              <h6>Severity</h6>
+            </div>
+          </div>
+          <div class="text-center">
+            <textarea id="severity" name="__severityNotes__" maxlength="120" placeholder="Enter in your notes about the severity of your consequence here.."></textarea>
+          </div><span><i>Maximum character limit is 120</i></span>
+        </div>
+
+
+        <div class="mb-4">
+          <div class="row">
+            <div class="col-8">
+              <p class="paraQues">Is the Susceptibility of the consequences high, moderate, or low?</p>
+              <input type="radio" id="susceptibility" name="__susceptibility__" value="High">
+              <label>  High</label><br>
+              <input type="radio" id="susceptibility" name="__susceptibility__" value="Moderate">
+              <label>  Moderate</label><br>
+              <input type="radio" id="susceptibility" name="__susceptibility__" value="Low">
+              <label>  Low</label><br>
+            </div>
+            <div class="col-4 text-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-question-circle-fill risk-icons" viewBox="0 0 16 16">
+                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.496 6.033h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286a.237.237 0 0 0 .241.247zm2.325 6.443c.61 0 1.029-.394 1.029-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94 0 .533.425.927 1.01.927z"/>
+              </svg>
+              <h6>Susceptibility</h6>
+            </div>
+          </div>
+          <div class="text-center">
+            <textarea id="susceptibility" name="__susceptibilityNotes__" maxlength="120" placeholder="Enter in your notes about the severity of your consequence here.."></textarea>
+          </div><span><i>Maximum character limit is 120</i></span>
+        </div>
+
+      </div>
+      
+
+      <button type="button" class="action-button previous previous_button mb-5">Back</button>
+      <button type="button" class="next action-button mb-5">Continue</button>  
+    </fieldset>  
+
+
+    <fieldset>
+      <h3>Additional Questions</h3>
+      <h6>Need to fill all the input fields</h6>
+      <div class="form-group text-center">
+        <div class="mb-2">
+          <p class="paraQues mb-3">How similar to each other are the people in your population?</p>
+        <ul class='likert'>
+          <li>
+            <label class="paraQues">Very Different Types of People</label>
+          </li>
+          <li>
+            <input type="radio" name="__populationVariance__" value="1">
+            <label class="paraQues">1</label>
+          </li>
+          <li>
+            <input type="radio" name="__populationVariance__" value="2">
+            <label class="paraQues">2</label>
+          </li>
+          <li>
+            <input type="radio" name="__populationVariance__" value="3">
+            <label class="paraQues">3</label>
+          </li>
+          <li>
+            <input type="radio" name="__populationVariance__" value="4">
+            <label class="paraQues">4</label>
+          </li>
+          <li>
+            <input type="radio" name="__populationVariance__" value="5">
+            <label class="paraQues">5</label>
+          </li>
+          <li>
+            <input type="radio" name="__populationVariance__" value="6">
+            <label class="paraQues">6</label>
+          </li>
+          <li>
+            <input type="radio" name="__populationVariance__" value="7">
+            <label class="paraQues">7</label>
+          </li>
+          <li>
+            <label class="paraQues">Very Similar Types of People</label>
+          </li>
+        </ul>
+        </div>
+
+
+        <div class="mb-3 text-left">
+          <p class="paraQues mb-2">Below are several ways that your population might differ. Check all that apply to your population:</p>
+          <label>
+            <input type="checkbox" id="check1.1" name="__populationDiffer__[]" value="Age"> Age
+          </label>
+          <br>
+          <label>
+              <input type="checkbox" id="check1.2" name="__populationDiffer__[]" value="Culture"> Culture
+          </label>
+          <br>
+          <label>
+              <input type="checkbox" id="check1.3" name="__populationDiffer__[]" value="Location"> Location
+          </label>
+          <br>
+          <label>
+            <input type="checkbox" id="check1.4" name="__populationDiffer__[]" value="Education"> Education
+          </label>
+          <br>
+          <label>
+              <input type="checkbox" id="check1.5" name="__populationDiffer__[]" value="Income"> Income
+          </label>
+          <br>
+          <label>
+              <input type="checkbox" id="check1.6" name="__populationDiffer__[]" value="Gain"> What they have to gain from the choice you advocate
+          </label>
+          <br>
+          <label>
+            <input type="checkbox" id="check1.7" name="__populationDiffer__[]" value="Lose"> What they have to lose from the choice you advocate.
+          </label>
+          <br>
+        </div>
+
+        <div class="mb-3 text-left">
+          <p class="paraQues mb-2">Is the choice visible to others?</p>
+          <label>
+            <input type="radio" id="radio1.1" name="__visibleChoice__" value="Yes"> Yes
+          </label>
+          <br>
+          <label>
+              <input type="radio" id="radio1.2" name="__visibleChoice__" value="No"> No
+          </label>
+          <br>
+          <label>
+              <input type="radio" id="radio1.3" name="__visibleChoice__" value="Don't Know"> Don't Know
+          </label>
+          <br>
+        </div>
+
+        <div class="mb-3 text-left">
+          <p class="paraQues mb-2">Does the choice say something about one’s identity?</p>
+          <label>
+            <input type="radio" id="radio2.1" name="__identity__" value="Yes"> Yes
+          </label>
+          <br>
+          <label>
+              <input type="radio" id="radio2.2" name="__identity__" value="No"> No
+          </label>
+          <br>
+          <label>
+              <input type="radio" id="radio2.3" name="__identity__" value="Don't Know"> Don't Know
+          </label>
+          <br>
+        </div>
+
+
+        <div class="mb-3">
+          <p class="paraQues mb-3">Accurate knowledge about the risk?</p>
+        <ul class='likert'>
+          <li>
+            <label class="paraQues">Very Low</label>
+          </li>
+          <li>
+            <input type="radio" name="__riskKnowledge__" value="1">
+            <label class="paraQues">1</label>
+          </li>
+          <li>
+            <input type="radio" name="__riskKnowledge__" value="2">
+            <label class="paraQues">2</label>
+          </li>
+          <li>
+            <input type="radio" name="__riskKnowledge__" value="3">
+            <label class="paraQues">3</label>
+          </li>
+          <li>
+            <input type="radio" name="__riskKnowledge__" value="4">
+            <label class="paraQues">4</label>
+          </li>
+          <li>
+            <input type="radio" name="__riskKnowledge__" value="5">
+            <label class="paraQues">5</label>
+          </li>
+          <li>
+            <input type="radio" name="__riskKnowledge__" value="6">
+            <label class="paraQues">6</label>
+          </li>
+          <li>
+            <input type="radio" name="__riskKnowledge__" value="7">
+            <label class="paraQues">7</label>
+          </li>
+          <li>
+            <label class="paraQues">Very High</label>
+          </li>
+        </ul>
+        </div>
+
+
+        <div class="mb-3">
+          <p class="paraQues mb-3">People feel like they have knowledge about the risk?</p>
+        <ul class='likert'>
+          <li>
+            <label class="paraQues">Very Low</label>
+          </li>
+          <li>
+            <input type="radio" name="__feelsKnowledge__" value="1">
+            <label class="paraQues">1</label>
+          </li>
+          <li>
+            <input type="radio" name="__feelsKnowledge__" value="2">
+            <label class="paraQues">2</label>
+          </li>
+          <li>
+            <input type="radio" name="__feelsKnowledge__" value="3">
+            <label class="paraQues">3</label>
+          </li>
+          <li>
+            <input type="radio" name="__feelsKnowledge__" value="4">
+            <label class="paraQues">4</label>
+          </li>
+          <li>
+            <input type="radio" name="__feelsKnowledge__" value="5">
+            <label class="paraQues">5</label>
+          </li>
+          <li>
+            <input type="radio" name="__feelsKnowledge__" value="6">
+            <label class="paraQues">6</label>
+          </li>
+          <li>
+            <input type="radio" name="__feelsKnowledge__" value="7">
+            <label class="paraQues">7</label>
+          </li>
+          <li>
+            <label class="paraQues">Very High</label>
+          </li>
+        </ul>
+        </div>
+
+
+        <div class="mb-3 text-left">
+          <p class="paraQues mb-2">Where do people go to for information about choice? (Check all that apply)</p>
+          <label>
+            <input type="checkbox" id="check2.1" name="__choiceInformation0__" value="Internet"> Internet
+          </label>
+          <br>
+          <label>
+              <input type="checkbox" id="check2.2" name="__choiceInformation1__" value="Friends"> Friends
+          </label>
+          <br>
+          <label>
+              <input type="checkbox" id="check2.3" name="__choiceInformation2__" value="National Experts"> National Experts
+          </label>
+          <br>
+          <label>
+            <input type="checkbox" id="check2.4" name="__choiceInformation3__" value="Local Leaders"> Local Leaders
+          </label>
+          <br>
+          <label>
+              <input type="checkbox" id="check2.5" name="__choiceInformation4__" value="Family"> Family
+          </label>
+          <br>
+          <input type="text" id="choices" name="__choiceInformation5__" autocomplete="off" maxlength="40" placeholder="Notes..."/><br><i>Maximum character limit is 40</i>
+        </div>
+
+      </div>
+
+      <button type="button" class="action-button previous previous_button mb-5">Back</button>
+      <button type="button" class="next action-button mb-5">Continue</button>  
+    </fieldset>  
+
+
+    <fieldset>
+      <h3>Call to Action: Understanding Intentions & Implementation</h3>
+      <h6>You need to fill all the input fields</h6> 
+      <div class="form-group mb-4"> 
+        <div class="form-group text-left">
+          <label>What intentions do you want person to set for their self? </label>
+          <ul id="square">
+            <li><input type="text" class="fill-the-blanks intention" name="__intention__" autocomplete="off" maxlength="100"/></li>
+            <li><input type="text" class="fill-the-blanks intention" name="__intention1__" autocomplete="off" maxlength="100"/></li>
+            <li><input type="text" class="fill-the-blanks intention" name="__intention2__" autocomplete="off" maxlength="100"/></li>
+          </ul>
+        </div>
+        <div class="form-group text-left">
+          <label>What barriers may block good intentions for this situation?</label>
+          <ul id="square">
+            <li><input type="text" class="fill-the-blanks intention" name="__intention__" autocomplete="off" maxlength="100"/></li>
+            <li><input type="text" class="fill-the-blanks intention" name="__intention1__" autocomplete="off" maxlength="100"/></li>
+            <li><input type="text" class="fill-the-blanks intention" name="__intention2__" autocomplete="off" maxlength="100"/></li>
+          </ul>
+        </div>
+        <div class="form-group text-left">
+          <label>How could the person positively influence others?</label>
+          <ul id="square">
+            <li><input type="text" class="fill-the-blanks intention" name="__intention__" autocomplete="off" maxlength="100"/></li>
+            <li><input type="text" class="fill-the-blanks intention" name="__intention1__" autocomplete="off" maxlength="100"/></li>
+            <li><input type="text" class="fill-the-blanks intention" name="__intention2__" autocomplete="off" maxlength="100"/></li>
+          </ul>
+        </div>
+      </div>
       <button type="button" class="action-button previous previous_button">Back</button> 
-      <a href="#" class="action-button">Finish</a> 
+      <button type="submit" class="action-button">Finish</button>
     </fieldset>  
   </form>  
 </section> 
