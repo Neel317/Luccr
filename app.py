@@ -35,20 +35,53 @@ def form_submit():
         search_query.append(('__severityNotes__', request.form.get('__severityNotes__')))
         search_query.append(('__susceptibilityNotes__', request.form.get('__susceptibilityNotes__')))
 
+        riskKnowledge = request.form.get('__riskKnowledge__')
+        if(riskKnowledge):
+            if(int(riskKnowledge) < 3):riskKnowledge = 'LOW'
+            elif (int(riskKnowledge) < 6): riskKnowledge = 'MODERATE'
+            else: riskKnowledge = 'HIGH'
+            search_query.append(('_risk_', riskKnowledge))
+        else:
+            search_query.append(('_risk_',""))
+
+        feelsKnowledge = request.form.get('__feelsKnowledge__')
+
+        if(feelsKnowledge):
+            if(int(feelsKnowledge) < 3):feelsKnowledge = 'LOW'
+            elif (int(feelsKnowledge) < 6): feelsKnowledge = 'MODERATE'
+            else: feelsKnowledge = 'HIGH'
+            search_query.append(('_risk1_', feelsKnowledge))
+        else:
+            search_query.append(('_risk1_',""))
+
+
+
         j = 0
-        for i in range(0, 7):
+        k = 0
+        for i in range(0, 8):
             if(i <= 3):
                 issues = '__issues' + str(i) + '__'
                 search_query.append((issues, request.form.get(issues)))
             choice = '__choiceInformation' + str(i) + '__'
-            if(request.form.get(choice)):
+            if(i < 7 and request.form.get(choice)):
                 choice_query = '__choiceInformation' + str(j) + '__'
                 search_query.append((choice_query, request.form.get(choice)))
                 j+=1
-        while(j < 4):
+            population = '__populationDiffer' + str(i) + '__'
+            if(request.form.get(population)):
+                population_query = '_population' + str(k) + '_'
+                search_query.append((population_query, request.form.get(population)))
+                k+=1
+
+        while(j < 5):
             choice_query = '__choiceInformation' + str(j) + '__'
             search_query.append((choice_query, ''))
             j+=1
+        while(k < 8):
+            population_query = '_population' + str(k) + '_'
+            search_query.append((population_query, ''))
+            k+=1
+
         print(search_query)
         replacer = TextReplacer("Testing LUCCR.pptx", tables=True, charts=True, textframes=True)
         replacer.replace_text(search_query)
