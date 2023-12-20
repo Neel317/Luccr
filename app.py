@@ -35,6 +35,12 @@ def form_submit():
         search_query.append(('__severityNotes__', request.form.get('__severityNotes__')))
         search_query.append(('__susceptibilityNotes__', request.form.get('__susceptibilityNotes__')))
 
+        # ! (These are not possible due to smart Art pptx element.)
+        # search_query.append(('__exposure__', request.form.get('__exposure__'))) 
+        # search_query.append(('__severity__', request.form.get('__severity__')))
+        # search_query.append(('__susceptibility__', request.form.get('__susceptibility__')))
+
+
         riskKnowledge = request.form.get('__riskKnowledge__')
         if(riskKnowledge):
             if(int(riskKnowledge) < 3):riskKnowledge = 'LOW'
