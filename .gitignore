@@ -47,8 +47,6 @@ ipython_config.py
 # IPython Notebook
 *.ipynb
 
-#pptx
-*.pptx
 
 # pyenv
 .python-version
