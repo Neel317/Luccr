@@ -47,6 +47,8 @@ ipython_config.py
 # IPython Notebook
 *.ipynb
 
+#program
+programs/
 
 # pyenv
 .python-version
