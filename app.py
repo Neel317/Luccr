@@ -93,7 +93,7 @@ def form_submit():
             k+=1
 
         print(search_query)
-        replacer = TextReplacer("Testing LUCCR.pptx", tables=True, charts=True, textframes=True)
+        replacer = TextReplacer("Testing Luccr.pptx", tables=True, charts=True, textframes=True)
         replacer.replace_text(search_query)
         replacer.write_presentation_to_file("./Luccr.pptx")
         response = send_from_directory(directory = app.root_path, path='Luccr.pptx')
