@@ -633,3 +633,119 @@ form .buttons .submit:hover {background-color: #14892c;}
 #inline {
   margin: 0px;
 }
+
+
+/*---------------------------------------
+  RESPONSIVE STYLES               
+-----------------------------------------*/
+@media screen and (max-width: 991px) {
+  h1 {
+    font-size: 48px;
+  }
+
+  h2 {
+    font-size: 36px;
+  }
+
+  h3 {
+    font-size: 32px;
+  }
+
+  h4 {
+    font-size: 28px;
+  }
+
+  h5 {
+    font-size: 20px;
+  }
+
+  h6 {
+    font-size: 18px;
+  }
+
+  .section-padding {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  
+  .navbar {
+    background-color: var(--secondary-color);
+  }
+
+  .navbar-nav .dropdown-menu {
+    position: relative;
+    left: 10px;
+    opacity: 1;
+    pointer-events: auto;
+    max-width: 155px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+
+  .navbar-expand-lg .navbar-nav {
+    padding-bottom: 20px;
+  }
+
+  .navbar-expand-lg .navbar-nav .nav-link {
+    padding: 0;
+  }
+
+  .nav-tabs .nav-link:first-child {
+    margin-right: 5px;
+  }
+
+  .nav-tabs .nav-link {
+    font-size: var(--copyright-font-size);
+    padding: 10px;
+  }
+
+  .featured-section {
+    border-radius: 0 0 80px 80px;
+    padding-bottom: 50px;
+  }
+
+  .custom-block-topics-listing .custom-block-image {
+    width: auto;
+  }
+
+  .custom-block-topics-listing > .d-flex,
+  .custom-block-topics-listing-info,
+  .custom-block-topics-listing a {
+    flex-direction: column;
+  }
+
+  .timeline-container .vertical-scrollable-timeline .list-progress {
+    height: 75%;
+  }
+
+  .timeline-container .vertical-scrollable-timeline li {
+    padding-left: 135px;
+  }
+
+  .subscribe-form-wrap {
+    padding-top: 30px;
+    padding-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 36px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  h3 {
+    font-size: 26px;
+  }
+
+  h4 {
+    font-size: 22px;
+  }
+
+  h5 {
+    font-size: 20px;
+  }
+}

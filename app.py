@@ -24,6 +24,10 @@ def home_page():
 def form_page():
     return render_template('forms.html')
 
+@app.route('/about_us')
+def about_us():
+    return render_template('about.html')
+
 @app.route('/formSubmit', methods=['GET', 'POST'])
 def form_submit():
     
@@ -95,7 +99,3 @@ def form_submit():
         response = send_from_directory(directory = app.root_path, path='Luccr.pptx')
         response.headers['my-custom-header'] = 'my-custom-status-0'
     return response
-
-
-if __name__ == '__main__':
-    app.run(debug=True)
