@@ -99,3 +99,7 @@ def form_submit():
         response = send_from_directory(directory = app.root_path, path='Luccr.pptx')
         response.headers['my-custom-header'] = 'my-custom-status-0'
     return response
+
+
+if __name__ == '__main__':
+    app.run(debug=True)
