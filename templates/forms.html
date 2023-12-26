@@ -56,7 +56,7 @@
       <h3>Define the choice and identify issues</h3>
       <h6>Need to fill all the input fields</h6> 
       <div class="form-group mb-2 text-left"> 
-        <label for="topic" id="inline">I want to help people make a choice about </label>
+        <label for="topic" id="inline">I want to help people make a choice about <strong style="color: red;">*</strong></label>
         <input type="text" class="fill-the-blanks" id="topic" name="__topic__" placeholder="Maximun 50 characters" maxlength="50" autocomplete="off" required>
       </div>
       <div class="form-group mb-4 text-left">
@@ -64,15 +64,14 @@
         <input type="text" class="fill-the-blanks" id="topic1" name="__topic1__" placeholder="Maximun 50 characters" maxlength="50" autocomplete="off">
       </div>
       <div class="form-group text-left">
-          <label for="issues">What do you think are most important issues? <i>(Keep it short less than 40 characters)</i> </label>
+          <label for="issues">What do you think are most important issues? <i>(Keep it short less than 40 characters) </i><strong style="color: red;">*</strong></label>
           <ul id="square">
-            <li><input type="text" class="fill-the-blanks" id="issues" name="__issues0__" autocomplete="off" maxlength="40"/></li>
+            <li><input type="text" class="fill-the-blanks" id="issues" name="__issues0__" autocomplete="off" maxlength="40" required/></li>
             <li><input type="text" class="fill-the-blanks" id="issues1" name="__issues1__" autocomplete="off" maxlength="40"/></li>
             <li><input type="text" class="fill-the-blanks" id="issues2" name="__issues2__" autocomplete="off" maxlength="40"/></li>
             <li><input type="text" class="fill-the-blanks" id="issues3" name="__issues3__" autocomplete="off" maxlength="40"/></li>
           </ul>
       </div>
-      <button type="button" onclick="location.href = '/'" class="action-button previous_button">Back</button>
       <button type="button" class="next action-button">Continue</button>  
     </fieldset>
 
@@ -123,7 +122,7 @@
         <div class="mb-4">
           <div class="row">
             <div class="col-8">
-              <p class="paraQues">Is the Exposure of the consequences high, moderate, or low?</p>
+              <p class="paraQues">Is the Exposure of the consequences high, moderate, or low? <strong style="color: red;">*</strong></p>
               <input type="radio" id="exposure" name="__exposure__" value="High">
               <label>  High</label><br>
               <input type="radio" id="exposure" name="__exposure__" value="Moderate">
@@ -145,7 +144,7 @@
         <div class="mb-4">
           <div class="row">
             <div class="col-8">
-              <p class="paraQues">Is the Severity of the consequences high, moderate, or low?</p>
+              <p class="paraQues">Is the Severity of the consequences high, moderate, or low? <strong style="color: red;">*</strong></p>
               <input type="radio" id="severity" name="__severity__" value="High">
               <label>  High</label><br>
               <input type="radio" id="severity" name="__severity__" value="Moderate">
@@ -169,7 +168,7 @@
         <div class="mb-4">
           <div class="row">
             <div class="col-8">
-              <p class="paraQues">Is the Susceptibility of the consequences high, moderate, or low?</p>
+              <p class="paraQues">Is the Susceptibility of the consequences high, moderate, or low? <strong style="color: red;">*</strong></p>
               <input type="radio" id="susceptibility" name="__susceptibility__" value="High">
               <label>  High</label><br>
               <input type="radio" id="susceptibility" name="__susceptibility__" value="Moderate">
@@ -243,7 +242,7 @@
 
 
         <div class="mb-3 text-left">
-          <p class="paraQues mb-2">Below are several ways that your population might differ. Check all that apply to your population:</p>
+          <p class="paraQues mb-2">Below are several ways that your population might differ. Check all that apply to your population: <strong style="color: red;">*</strong></p>
           <label>
             <input type="checkbox" id="check1.1" name="__populationDiffer0__" value="Age"> Age
           </label>
@@ -308,7 +307,7 @@
 
 
         <div class="mb-3">
-          <p class="paraQues mb-3">Accurate knowledge about the risk?</p>
+          <p class="paraQues mb-3">Accurate knowledge about the risk? <strong style="color: red;">*</strong></p>
         <ul class='likert'>
           <li>
             <label class="paraQues">Very Low</label>
@@ -349,7 +348,7 @@
 
 
         <div class="mb-3">
-          <p class="paraQues mb-3">People feel like they have knowledge about the risk?</p>
+          <p class="paraQues mb-3">People feel like they have knowledge about the risk? <strong style="color: red;">*</strong></p>
         <ul class='likert'>
           <li>
             <label class="paraQues">Very Low</label>
@@ -390,7 +389,7 @@
 
 
         <div class="mb-3 text-left">
-          <p class="paraQues mb-2">Where do people go to for information about choice? (Check all that apply)</p>
+          <p class="paraQues mb-2">Where do people go to for information about choice? (Check all that apply) <strong style="color: red;">*</strong></p>
           <label>
             <input type="checkbox" id="check2.1" name="__choiceInformation0__" value="Internet"> Internet
           </label>
