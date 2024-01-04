@@ -540,6 +540,19 @@ input[type="text"], textarea{
   border-width: 4px;
   outline: none;
 }
+
+/* #exposure {
+  display: none;
+}
+
+.exposure:hover #exposure {
+  display: inline-block;
+} 
+
+.exposure:not(:hover) #exposure{
+  display: none;
+} */
+
 textarea {
   width: 100%;
   font: 1rem;
