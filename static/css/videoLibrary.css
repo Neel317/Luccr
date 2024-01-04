@@ -1033,50 +1033,17 @@ blockquote {
 }
 
 
-
 /*---------------------------------------
-  Only About us STYLES               
+  ONLY VIDEO LIBRARY STYLES              
 -----------------------------------------*/
-.nav-heading{
-  color: var(--white-color);
-}
-
-
 .outter-container {
   margin-top: 6.5rem;
 }
 
-.card {
-  width: 90%;
-  border-radius: 3rem;
-}
-
-.card-title {
-  color: var(--dark-color);
-}
-
-.card-text {
-  color: var(--p-color);
-  font-size: 1rem;
-  margin: 0;
-}
-
-.team-conatainer {
-  background-color: var(--secondary-color);
-  padding: 2rem;
-  width: 100vw;
-  border-radius: 2rem;
-}
-
-.team-heading {
+.nav-heading{
   color: var(--white-color);
-  margin-bottom: 2rem;
-  margin-top: 1rem
 }
 
-.text-para {
-  text-align: justify;
-}
 
 
 /*---------------------------------------
@@ -1170,33 +1137,7 @@ blockquote {
     padding-top: 30px;
     padding-bottom: 0;
   }
-
-  /*---------------------------------------
-  Only About us STYLES               
-  -----------------------------------------*/
-
-  .card {
-    width: 70%;
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .team-heading {
-    margin-top: 2rem;
-  }
 }
-
-
-@media screen and (max-width: 600px) {
-  .card {
-    width: 75%;
-  }
-
-  .team-conatainer {
-    padding: 0;
-  }
-}
-
 
 @media screen and (max-width: 480px) {
   h1 {
@@ -1219,4 +1160,3 @@ blockquote {
     font-size: 20px;
   }
 }
-

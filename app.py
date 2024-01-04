@@ -28,6 +28,10 @@ def form_page():
 def about_us():
     return render_template('about.html')
 
+@app.route('/video_library')
+def video_library():
+    return render_template('videoLibrary.html')
+
 @app.route('/formSubmit', methods=['GET', 'POST'])
 def form_submit():
     
