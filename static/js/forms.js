@@ -1,10 +1,10 @@
 
-const topic = document.querySelector('#topic');
-const topic1 = document.querySelector('#topic1');
-const issues = document.querySelector('#issues');
-const issues1 = document.querySelector('#issues1');
-const issues2 = document.querySelector('#issues2');
-const issues3 = document.querySelector('#issues3');
+// const topic = document.querySelector('#topic');
+// const topic1 = document.querySelector('#topic1');
+// const issues = document.querySelector('#issues');
+// const issues1 = document.querySelector('#issues1');
+// const issues2 = document.querySelector('#issues2');
+// const issues3 = document.querySelector('#issues3');
 // const exposure = document.querySelector('#exposure');
 // const severity = document.querySelector('#severity');
 // const susceptibility = document.querySelector('#susceptibility');
@@ -14,10 +14,10 @@ const issues3 = document.querySelector('#issues3');
 // const check24 = document.querySelector('#check2.4');
 // const check25 = document.querySelector('#check2.5');
 
-function validateInputs(){
-    if(!topic.value.length){
-        return {element: topic, complete: false};
-    } 
+// function validateInputs(){
+//     if(!topic.value.length){
+//         return {element: topic, complete: false};
+//     } 
     // else if(!topic1.value.length){
     //     return {element: topic1, complete: false};
     // } 
@@ -45,10 +45,10 @@ function validateInputs(){
     // else if(!check21.checked || !check22.checked || !check23.checked || !check24.checked || !check25.checked){
     //     return {element: null, complete: false};
     // }
-    else {
-        return {element: null, complete: true};
-    }
-}
+//     else {
+//         return {element: null, complete: true};
+//     }
+// }
 
 
 ;(function($) {
@@ -63,9 +63,6 @@ function validateInputs(){
 
       $(".next").click(function () {
           
-
-          const inputChecks = validateInputs()
-          if(inputChecks.complete){
             if (animating) return false;
             animating = true;
 
@@ -106,12 +103,8 @@ function validateInputs(){
                 easing: 'easeInOutBack'
             });
             window.scrollTo({ top: 0, behavior: 'smooth' });
-          } else {
-            if(inputChecks.element){
-                inputChecks.element.focus();
-            }
           }
-      });
+      );
 
       $(".previous").click(function () {
           if (animating) return false;
